@@ -9,7 +9,6 @@ const AllPosts = (props) => {
       handleCommentFormSubmit={props.handleCommentFormSubmit}/>
       </div>
     )
-
   })
 
   return(
