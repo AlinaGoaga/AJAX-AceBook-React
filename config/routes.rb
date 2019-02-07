@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  # devise_for :users do
+  #   get '/users/sign_out' => 'devise/sessions#destroy'
+  # end
 
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # get '/home', to: 'posts#home'
@@ -14,6 +15,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :posts
+      # devise_for :users, controllers: 
+      # { registrations: ‘registrations’, sessions: ‘sessions’ }
+      devise_for :users
+      
+
     end
   end
 
