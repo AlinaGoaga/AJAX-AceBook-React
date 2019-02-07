@@ -11,8 +11,8 @@ class Post extends React.Component {
     if(this.state.editable){
       let message = this.message.value
       let id = this.props.post.id
-      let created_at = this.props.post.created_at
-      let post = {id: id, message: message, created_at: created_at}
+      let updated_at = this.props.post.updated_at
+      let post = {id: id, message: message, updated_at: updated_at}
       this.props.handleUpdate(post)
     }
     this.setState({
@@ -35,7 +35,7 @@ class Post extends React.Component {
     return(
       <div>
         {message}
-        <p>{this.props.post.created_at}</p>
+        <p>{this.props.post.updated_at}</p>
         <button onClick={() => this.handleEdit()}>
         {this.state.editable? 'Submit' : 'Edit'}</button>
         <button onClick={() =>
