@@ -62,12 +62,6 @@ class Body extends React.Component {
     })
   }
 
-  componentDidMount() {
-    fetch('/api/v1/posts.json')
-    .then((response) => {return response.json()})
-    .then((data) => {this.setState({ posts: data }) });
-  }
-
   handleUpdate(post) {
     fetch(`http://localhost:3000/api/v1/posts/${post.id}`,
       {
@@ -107,6 +101,12 @@ class Body extends React.Component {
         this.setState({
           posts: newPosts
         })
+      }
+
+      componentDidMount() {
+        fetch('/api/v1/posts.json')
+        .then((response) => {return response.json()})
+        .then((data) => {this.setState({ posts: data }) });
       }
 
       render() {

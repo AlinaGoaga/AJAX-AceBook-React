@@ -30,8 +30,6 @@ class Post extends React.Component {
       this.props.post.message
     } </h3>
 
-    var formFields = {}
-
     return(
       <div>
         {message}
@@ -41,16 +39,8 @@ class Post extends React.Component {
         <button onClick={() =>
           this.props.handleDelete(this.props.post.id)}>Delete</button>
         <AllComments comments = {this.props.post.comments}/>
-        <form onSubmit={ (e) => {
-              this.props.handleCommentFormSubmit(formFields.body.value,this.props.post);
-              e.target.reset();
-              e.preventDefault();
-            }
-          }>
-          <input ref={input => formFields.body = input}
-              placeholder='Join the conversation' />
-          <button>Submit</button>
-        </form>
+        <NewComment post = {this.props.post}
+        handleCommentFormSubmit = {this.props.handleCommentFormSubmit}/>
       </div>
     )
   }
