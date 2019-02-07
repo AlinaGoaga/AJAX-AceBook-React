@@ -1,19 +1,12 @@
 
-# AceBook [![Build Status](https://travis-ci.org/AlinaGoaga/AJAX-AceBook.svg?branch=master)](https://travis-ci.org/AlinaGoaga/AJAX-AceBook)
+# AceBook
 
-REQUIRED INSTRUCTIONS:
+The card wall for this project showing how we estimated the lenght of tasks, division of work and iterative deployment as per Agile principles, is here: https://trello.com/b/eSDBp5iu/ajax-acebook.
 
-1. Fork this repository to `acebook-teamname` and customize
-the below**
+We have also recorded our standups and retros and also learning points here: https://docs.google.com/document/d/1ohjv9JBgKYqyUJgje8z_QG9PYIkzNuMksxugn8j5Awo/edit
 
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
-
-2. The card wall is here: https://trello.com/b/eSDBp5iu/ajax-acebook
-
-3. App is deployed at: https://git.heroku.com/polar-journey-26072.git
-
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+In order to test the application you will have to sign up via https://github.com/AlinaGoaga/AJAX-AceBook. 
+In future releases we are planning to introduce the functionality on this version which will remove the need to sign up via the old repo.
 
 ## Quickstart
 
@@ -23,7 +16,5 @@ First, clone this repository. Then:
 > bundle install
 > bin/rails db:create
 > bin/rails db:migrate
-
-> bundle exec rspec # Run the tests to ensure it works
 > bin/rails server # Start the server at localhost:3000
 ```
