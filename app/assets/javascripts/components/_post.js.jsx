@@ -29,7 +29,8 @@ class Post extends React.Component {
     }/> : <h3> {
       this.props.post.message
     } </h3>
-    // <p> {this.props.post.created_at} </p>;
+
+    var formFields = {}
 
     return(
       <div>
@@ -39,6 +40,17 @@ class Post extends React.Component {
         {this.state.editable? 'Submit' : 'Edit'}</button>
         <button onClick={() =>
           this.props.handleDelete(this.props.post.id)}>Delete</button>
+        <AllComments comments = {this.props.post.comments}/>
+        <form onSubmit={ (e) => {
+              this.props.handleCommentFormSubmit(formFields.body.value,this.props.post);
+              e.target.reset();
+              e.preventDefault();
+            }
+          }>
+          <input ref={input => formFields.body = input}
+              placeholder='Join the conversation' />
+          <button>Submit</button>
+        </form>
       </div>
     )
   }

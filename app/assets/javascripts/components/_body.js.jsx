@@ -11,6 +11,8 @@ class Body extends React.Component {
     this.deletePost = this.deletePost.bind(this)
     this.handleUpdate = this.handleUpdate.bind(this)
     this.updatePost = this.updatePost.bind(this)
+    this.handleCommentFormSubmit = this.handleCommentFormSubmit.bind(this)
+    this.addNewComment = this.addNewComment.bind(this)
   }
 
   handleFormSubmit(message) {
@@ -29,8 +31,34 @@ class Body extends React.Component {
   }
 
   addNewPost(post){
+    var posts = this.state.posts
+    posts.unshift(post)
     this.setState({
-      posts: this.state.posts.unshift(post)
+      posts: posts
+    })
+  }
+
+  handleCommentFormSubmit(body,post) {
+    let requestBody = JSON.stringify({ comment: { body: body } })
+    fetch(`/api/v1/posts/${post.id}/comments`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: requestBody
+    }).then((response) => {return response.json()})
+    .then((comment)=>{
+      this.addNewComment(post,comment)
+    })
+  }
+
+  addNewComment(post, comment){
+    let newPosts = this.state.posts.map((p) => {
+      if (p === post) { p.comments.push(comment) }
+      return p;
+    })
+    this.setState({
+      posts: newPosts
     })
   }
 
@@ -42,52 +70,57 @@ class Body extends React.Component {
 
   handleUpdate(post) {
     fetch(`http://localhost:3000/api/v1/posts/${post.id}`,
-    {
-      method: 'PUT',
-      body: JSON.stringify({post: post}),
-      headers: {
-        'Content-Type': 'application/json'
+      {
+        method: 'PUT',
+        body: JSON.stringify({post: post}),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then((response) => {return response.json()})
+      .then((response) => {
+        this.updatePost(response)
+      })
+    }
+
+    updatePost(post){
+      let newPosts = this.state.posts.filter((p) => p.id !== post.id)
+      newPosts.unshift(post)
+      this.setState({
+        posts: newPosts
+      })
+    }
+
+    handleDelete(id) {
+      fetch(`http://localhost:3000/api/v1/posts/${id}`,
+        {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).then((response) => {
+          this.deletePost(id)
+        })
       }
-    }).then((response) => {
-      this.updatePost(post)
-    })
-  }
 
-  updatePost(post){
-    let newPosts = this.state.posts.filter((p) => p.id !== post.id)
-    newPosts.unshift(post)
-    this.setState({
-      posts: newPosts
-    })
-  }
-
-  handleDelete(id) {
-    fetch(`http://localhost:3000/api/v1/posts/${id}`,
-    {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
+      deletePost(id){
+        newPosts = this.state.posts.filter((post) => post.id !== id)
+        this.setState({
+          posts: newPosts
+        })
       }
-    }).then((response) => {
-      this.deletePost(id)
-    })
-  }
 
-  deletePost(id){
-    newPosts = this.state.posts.filter((post) => post.id !== id)
-    this.setState({
-      posts: newPosts
-    })
-  }
+      render() {
+        return(
+          <div>
 
-  render() {
-    return(
-      <div>
-        <NewPost handleFormSubmit={this.handleFormSubmit}/>
-        <AllPosts posts={this.state.posts}
+          <NewPost handleFormSubmit={this.handleFormSubmit}/>
+          <AllPosts posts={this.state.posts}
           handleDelete={this.handleDelete}
-          handleUpdate={this.handleUpdate}/>
-      </div>
-    )
-  }
-}
+          handleUpdate={this.handleUpdate}
+          handleCommentFormSubmit={this.handleCommentFormSubmit}
+          />
+
+          </div>
+        )
+      }
+    }
