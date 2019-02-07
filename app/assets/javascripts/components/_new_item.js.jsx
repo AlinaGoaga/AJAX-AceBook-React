@@ -5,7 +5,10 @@ const NewPost = (props) => {
 
 return (
     <form onSubmit={ (e) => {
-      props.handleFormSubmit(formFields.message.value); e.target.reset();}
+      props.handleFormSubmit(formFields.message.value);
+      e.target.reset();
+      e.preventDefault();
+    }
     }>
       <input ref={input => formFields.message = input}
       placeholder='Write your new post' />
