@@ -1,6 +1,6 @@
 const Main = (props) => {
   return(
-    <div>
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
       <Body />
     </div>
   )
