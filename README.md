@@ -21,21 +21,21 @@ Technologies used:
 | SimpleCov | Coverage analysis tool for Ruby |  
 
 The **card wall** for this project showing:
-• how we estimated the lenght of tasks, 
-• division of work and 
-• iterative deployment as per Agile principles  .... can be found [here](https://trello.com/b/eSDBp5iu/ajax-acebook).
+- how we estimated the lenght of tasks, 
+- division of work and 
+- iterative deployment as per Agile principles  .... can be found [here](https://trello.com/b/eSDBp5iu/ajax-acebook).
 
 We have also recorded our **standups/retros and also learning points** in a shared [Google doc](https://docs.google.com/document/d/1ohjv9JBgKYqyUJgje8z_QG9PYIkzNuMksxugn8j5Awo/edit).
 
 ## Our approach to this challenge
 
-• During the first week we worked on building a fully functional app in Rails. By the end of the week we had reached our MVP, covering all the initial user stories. The fully Rails app is also using: 
+During the first week we worked on building a fully functional app in Rails. By the end of the week we had reached our MVP, covering all the initial user stories. The fully Rails app is also using: 
 
 - Travis for continuous integration 
 - Rspec and Capybara for the 23 feature and unit tests 
 - Simplecov to keep track of our test coverage (at 99% at the moment)
 
-• The second week found us focusing on implementing React for our frontend. 
+The second week found us focusing on implementing React for our frontend. 
 
 - We managed to implement the same frontend functionality that we had on the fully Rails app (bar the authentication) 
 - We organized the code as a Single Page App which made it easier to manage
