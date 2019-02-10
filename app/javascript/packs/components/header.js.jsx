@@ -7,16 +7,20 @@ export default class Header extends React.Component {
 
   constructor(props){
     super(props);
-    if (this.props.currentUser == null){
-      this.state = {
+    this.state = { page: 'login' }
+    this.changePage = this.changePage.bind(this);
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.currentUser == null){
+      return {
         page:"login"
       }
-    } else{
-      this.state = {
+    } else {
+      return {
         page: "delete"
       }
     }
-    this.changePage = this.changePage.bind(this);
   }
 
   changePage(newPage) {
@@ -26,6 +30,7 @@ export default class Header extends React.Component {
   }
 
   render() {
+    console.log('header render called');
     switch(this.state.page) {
       case "signup":
       return <Signup changePage={this.changePage} updateCurrentUser={this.props.updateCurrentUser}/>

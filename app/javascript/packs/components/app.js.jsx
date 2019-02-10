@@ -15,16 +15,15 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
-    let that = this
-    axios.get('/users/check_for_user',{
+    axios.get('/api/v1/users/check_for_user',{
     })
-    .then(function(response){
+    .then((response) => {
       if(response.data.email){
-        that.setState({
+        this.setState({
           currentUser: response.data.email
         })
       } else {
-        that.setState({
+        this.setState({
           currentUser: null
         })
       }
@@ -43,7 +42,7 @@ export default class App extends React.Component {
   render(){
     return (
       <div>
-      <Header updateCurrentUser={this.updateCurrentUser}/>
+      <Header updateCurrentUser={this.updateCurrentUser} currentUser={this.state.currentUser}/>
       <Body />
       </div>
     )
