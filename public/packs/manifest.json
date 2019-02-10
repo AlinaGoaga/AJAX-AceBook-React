@@ -1,8 +1,8 @@
 {
-  "application.js": "/packs/application-79c0366a82baf5ef5d31.js",
-  "application.js.map": "/packs/application-79c0366a82baf5ef5d31.js.map",
-  "components/app.js": "/packs/components/app-c79536c457d85b750f25.js",
-  "components/app.js.map": "/packs/components/app-c79536c457d85b750f25.js.map",
+  "application.js": "/packs/application-66f08ac3760da896e409.js",
+  "application.js.map": "/packs/application-66f08ac3760da896e409.js.map",
+  "components/app.js": "/packs/components/app-671980d6b8ee6517040b.js",
+  "components/app.js.map": "/packs/components/app-671980d6b8ee6517040b.js.map",
   "components/authentication/login.js": "/packs/components/authentication/login-d1cf0c89a7522a0748f8.js",
   "components/authentication/login.js.map": "/packs/components/authentication/login-d1cf0c89a7522a0748f8.js.map",
   "components/authentication/logout.js": "/packs/components/authentication/logout-b64833424eeff1807234.js",
