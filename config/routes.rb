@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'users/check_for_user', to: 'users#check_for_user'
+      delete 'users/check_for_user', to: 'users#check_for_user'
       # get '/users/sign_out' => 'devise/sessions#destroy'
       resources :posts do
         resources :comments

@@ -10,14 +10,14 @@ export default class Logout extends React.Component {
 
   handleLogout(e) {
     e.preventDefault();
-    let that = this
     let email = this.props.currentUser
     axios.delete('/users/sign_out', {
     })
-    .then(function(response){
-      that.props.changePage("login")
+    .then((response) => {
+      this.props.changePage("login");
+      this.props.updateCurrentUser(null);
     })
-    .catch(function(error){
+    .catch((error) => {
       console.log(error)
     })
   }

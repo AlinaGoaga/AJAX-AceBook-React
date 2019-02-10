@@ -12,15 +12,20 @@ export default class Header extends React.Component {
   }
 
   static getDerivedStateFromProps(props, state) {
+    var newState = state;
     if (props.currentUser == null){
-      return {
-        page:"login"
+      if (state.page == 'delete') {
+        newState = {
+          page: 'login'
+        }
       }
     } else {
-      return {
+      newState = {
         page: "delete"
       }
     }
+
+    return newState;
   }
 
   changePage(newPage) {

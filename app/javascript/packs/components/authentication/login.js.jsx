@@ -11,7 +11,7 @@ export default class Login extends React.Component {
   handleLogin(e) {
     e.preventDefault();
     let that = this
-    axios.post('/users', {
+    axios.post('/users/sign_in', {
       user: {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value
