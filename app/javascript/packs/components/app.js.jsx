@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Header from './header.js.jsx'
+import Body from './body.js.jsx'
 
 export default class App extends React.Component {
 
@@ -43,6 +44,7 @@ export default class App extends React.Component {
     return (
       <div>
       <Header updateCurrentUser={this.updateCurrentUser}/>
+      <Body />
       </div>
     )
   }

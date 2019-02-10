@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default const NewPost = (props) => {
+const NewPost = (props) => {
 
   let formFields = {}
 
@@ -18,3 +18,5 @@ return (
     </form>
   )
 }
+
+export default NewPost;

@@ -1,4 +1,6 @@
 import React from 'react';
+import NewComment from './new_comment.js.jsx';
+import AllComments from './all_comments.js.jsx';
 
 export default class Post extends React.Component {
   constructor(props){

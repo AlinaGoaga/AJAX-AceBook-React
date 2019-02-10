@@ -1,4 +1,6 @@
 import React from 'react';
+import NewPost from './posts/new_post.js.jsx';
+import AllPosts from './posts/all_posts.js.jsx';
 
 export default class Body extends React.Component {
 
@@ -99,7 +101,7 @@ export default class Body extends React.Component {
       }
 
       deletePost(id){
-        newPosts = this.state.posts.filter((post) => post.id !== id)
+        let newPosts = this.state.posts.filter((post) => post.id !== id)
         this.setState({
           posts: newPosts
         })
@@ -114,7 +116,6 @@ export default class Body extends React.Component {
       render() {
         return(
           <div>
-
           <NewPost handleFormSubmit={this.handleFormSubmit}/>
           <AllPosts posts={this.state.posts}
           handleDelete={this.handleDelete}

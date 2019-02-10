@@ -1,6 +1,7 @@
 import React from 'react';
+import Post from './post.js.jsx';
 
-export default const AllPosts = (props) => {
+const AllPosts = (props) => {
 
   var posts = props.posts.map((post) => {
     return(
@@ -19,3 +20,5 @@ export default const AllPosts = (props) => {
     </div>
   )
 }
+
+export default AllPosts;

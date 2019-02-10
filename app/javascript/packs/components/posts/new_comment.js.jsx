@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default const NewComment = (props) => {
+const NewComment = (props) => {
 
   let formFields = {}
 
@@ -18,3 +18,5 @@ export default const NewComment = (props) => {
 )
 
 }
+
+export default NewComment;
