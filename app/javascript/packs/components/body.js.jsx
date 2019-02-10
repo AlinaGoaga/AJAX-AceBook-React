@@ -114,8 +114,18 @@ export default class Body extends React.Component {
       }
 
       render() {
+
+        var divStyle = {
+          background: "#eee",
+          padding: "20px",
+          margin: "20px",
+          width: "60%"
+        };
+
         return(
-          <div>
+
+          <div style={divStyle}>
+
           <NewPost handleFormSubmit={this.handleFormSubmit}/>
           <AllPosts posts={this.state.posts}
           handleDelete={this.handleDelete}

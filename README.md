@@ -1,8 +1,6 @@
 # AceBook - a Facebook clone built by the AJAX team!
 
-This application is built by using React for the frontend and Rails for the backend.
-
-![MVC and REACT](https://github.com/AlinaGoaga/AJAX-AceBook-React/blob/master/app/assets/stylesheets/MVC%20React)
+This application uses React for the frontend and Rails for the backend.
 
 It is using code form [AceBook Rails](https://github.com/AlinaGoaga/AJAX-AceBook), a version built fully in Rails and deployed on [Heroku](https://polar-journey-26072.herokuapp.com/posts).
 
@@ -83,12 +81,12 @@ First, clone this repository. Then:
 ## Acknowledgements
 
 This is a product of team work!
-[James Hotblack](https://github.com/hotblack86)
-[Jethro Whaley](https://github.com/jaywayawyaj)
-[Alex Alikhani](https://github.com/alexalikhani95)
-[Alina Goaga](https://github.com/AlinaGoaga)
+*[James Hotblack](https://github.com/hotblack86)
+*[Jethro Whaley](https://github.com/jaywayawyaj)
+*[Alex Alikhani](https://github.com/alexalikhani95)
+*[Alina Goaga](https://github.com/AlinaGoaga)
 
 ## Resources
 
-[Rails CRUD app with React frontend](https://medium.com/quick-code/simple-rails-crud-app-with-react-frontend-using-react-rails-gem-b708b89a9419)
-[Devise with React Webpacker and Rails](https://medium.com/@iamjane/devise-with-react-webpacker-and-rails-dacbf9ae0233)
+*[Rails CRUD app with React frontend](https://medium.com/quick-code/simple-rails-crud-app-with-react-frontend-using-react-rails-gem-b708b89a9419)
+*[Devise with React Webpacker and Rails](https://medium.com/@iamjane/devise-with-react-webpacker-and-rails-dacbf9ae0233)
