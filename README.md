@@ -2,6 +2,12 @@
 
 This application uses React for the frontend and Rails for the backend.
 
+Below are a couple of screenshots showcasing the app's functionality: 
+
+![Posts and comments](https://github.com/AlinaGoaga/AJAX_AceBook_ReactVersion/blob/master/app/assets/images/Posts.jpeg)
+![Sign up](https://github.com/AlinaGoaga/AJAX_AceBook_ReactVersion/blob/master/app/assets/images/Signup.jpeg)
+![Log in](https://github.com/AlinaGoaga/AJAX_AceBook_ReactVersion/blob/master/app/assets/images/Login.jpeg)
+
 It is using code form [AceBook Rails](https://github.com/AlinaGoaga/AJAX-AceBook), a version built fully in Rails and deployed on [Heroku](https://polar-journey-26072.herokuapp.com/posts).
 
 Technologies used:
