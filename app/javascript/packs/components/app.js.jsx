@@ -40,10 +40,14 @@ export default class App extends React.Component {
   }
 
   render(){
+    let body = <div></div>;
+    if(this.state.currentUser != null) {
+      body = <Body />
+    }
     return (
       <div>
       <Header updateCurrentUser={this.updateCurrentUser} currentUser={this.state.currentUser}/>
-      <Body />
+      {body}
       </div>
     )
   }
