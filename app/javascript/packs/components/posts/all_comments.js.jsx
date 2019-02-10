@@ -12,7 +12,7 @@ const AllComments = (props) => {
   })
 
   return(
-    <div>
+    <div style={{margin: "20px", fontStyle: "italic"}}>
     {comments}
     </div>
   )

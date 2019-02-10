@@ -46,8 +46,8 @@ export default class App extends React.Component {
     }
     return (
       <div>
-      <Header updateCurrentUser={this.updateCurrentUser} currentUser={this.state.currentUser}/>
-      {body}
+        <Header updateCurrentUser={this.updateCurrentUser} currentUser={this.state.currentUser}/>
+        {body}
       </div>
     )
   }

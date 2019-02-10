@@ -28,14 +28,28 @@ export default class Signup extends React.Component {
   }
 
   render() {
+
+    var divStyleAll= {
+      background: "#eee",
+      padding: "50px",
+      margin: "20px",
+      width: "60%"
+    }
+
+    var divStyle = {
+      padding: "25px"
+    };
+
     return (
-      <div>
+      <div style={divStyleAll}>
       <h2>Signup</h2>
       <form>
-      <input id="email" placeholder="email"/>
-      <input id="password" placeholder="password"/>
-      <input id="password_confirmation" placeholder="retype password"/>
-      <button onClick={this.handleSignup}>Submit</button>
+        <div style={divStyle}>
+          <input id="email" placeholder="email"/>
+          <input id="password" placeholder="password"/>
+          <input id="password_confirmation" placeholder="retype password"/>
+          <button onClick={this.handleSignup}>Submit</button>
+        </div>
       </form>
       <button onClick={() => this.props.changePage("login")}>Back to Login</button>
       </div>

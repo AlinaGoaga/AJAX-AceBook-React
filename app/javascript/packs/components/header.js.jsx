@@ -35,6 +35,7 @@ export default class Header extends React.Component {
   }
 
   render() {
+
     switch(this.state.page) {
       case "signup":
       return <Signup changePage={this.changePage} updateCurrentUser={this.props.updateCurrentUser}/>
