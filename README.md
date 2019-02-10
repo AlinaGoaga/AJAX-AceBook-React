@@ -34,9 +34,9 @@ During the first week we worked on building a fully functional app in Rails. By 
 - Rspec and Capybara for the 23 feature and unit tests
 - Simplecov to keep track of our test coverage (at 99% at the moment)
 
-The second week found us focusing on implementing React for our frontend.
+The second week found us focusing on implementing React for our frontend:
 
-- We managed to implement the same frontend functionality that we had on the fully Rails app (bar the authentication)
+- We managed to implement the same frontend functionality that we had on the fully Rails app
 - We organized the code as a Single Page App which made it easier to manage
 - The app has not been TDDed as we have been fully focused on getting to grips with how React works. Part of the team has been exploring JEST and CYPRESS which we are planning to add at a later stage.
 
@@ -79,10 +79,6 @@ First, clone this repository. Then:
 > bin/rails server
 > start the server at localhost:3000
 ```
-! JavaScript will need to be installed for React to work.
-
-! In order to test the application you will have to sign up via https://github.com/AlinaGoaga/AJAX-AceBook.
-In future releases we are planning to introduce the functionality on this version which will remove the need to sign up via the old repo.
 
 ## Acknowledgements
 
@@ -90,4 +86,9 @@ This is a product of team work!
 [James Hotblack](https://github.com/hotblack86)
 [Jethro Whaley](https://github.com/jaywayawyaj)
 [Alex Alikhani](https://github.com/alexalikhani95)
-[Alina Goaga](https://github.com/AlinaGoaga) 
+[Alina Goaga](https://github.com/AlinaGoaga)
+
+## Resources
+
+[Rails CRUD app with React frontend](https://medium.com/quick-code/simple-rails-crud-app-with-react-frontend-using-react-rails-gem-b708b89a9419)
+[Devise with React Webpacker and Rails](https://medium.com/@iamjane/devise-with-react-webpacker-and-rails-dacbf9ae0233)

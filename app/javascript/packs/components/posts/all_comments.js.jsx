@@ -1,3 +1,5 @@
+import React from 'react';
+
 const AllComments = (props) => {
 
   var comments = props.comments.map((comment) => {
@@ -15,3 +17,5 @@ const AllComments = (props) => {
     </div>
   )
 }
+
+export default AllComments;
