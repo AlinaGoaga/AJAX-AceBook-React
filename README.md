@@ -36,7 +36,7 @@ The second week found us focusing on implementing React for our frontend:
 
 - We managed to implement the same frontend functionality that we had on the fully Rails app
 - We organized the code as a Single Page App which made it easier to manage
-- The app has not been TDDed as we have been fully focused on getting to grips with how React works. Part of the team has been exploring JEST and CYPRESS which we are planning to add at a later stage.
+- The app has not been TDDed (the tests that are included at the moment come from the original app and need to be updated) as we have been fully focused on getting to grips with how React works. 
 
 ## User stories covered
 
