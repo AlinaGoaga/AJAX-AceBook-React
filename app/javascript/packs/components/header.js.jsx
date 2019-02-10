@@ -35,7 +35,6 @@ export default class Header extends React.Component {
   }
 
   render() {
-    console.log('header render called');
     switch(this.state.page) {
       case "signup":
       return <Signup changePage={this.changePage} updateCurrentUser={this.props.updateCurrentUser}/>
