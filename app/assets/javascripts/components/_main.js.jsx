@@ -1,7 +1,8 @@
 const Main = (props) => {
   return(
-    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+    <div>
       <Body />
+      <App />
     </div>
   )
 }
