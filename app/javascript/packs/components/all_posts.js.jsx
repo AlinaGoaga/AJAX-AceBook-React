@@ -1,4 +1,6 @@
-const AllPosts = (props) => {
+import React from 'react';
+
+export default const AllPosts = (props) => {
 
   var posts = props.posts.map((post) => {
     return(

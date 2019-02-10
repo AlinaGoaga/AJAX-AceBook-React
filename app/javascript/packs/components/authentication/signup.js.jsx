@@ -1,17 +1,20 @@
-class Login extends React.Component {
+import React from 'react';
+
+export default class Signup extends React.Component {
 
   constructor(props){
     super(props);
-    this.handleLogin = this.handleLogin.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
   }
 
-  handleLogin(e) {
+  handleSignup(e) {
     e.preventDefault();
     let that = this
     axios.post('/users', {
       user: {
         email: document.getElementById("email").value,
-        password: document.getElementById("password").value
+        password: document.getElementById("password").value,
+        password_confirmation: document.getElementById("password_confirmation").value
       }
     })
     .then(function(response){
@@ -26,13 +29,14 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-      <h2>Login</h2>
+      <h2>Signup</h2>
       <form>
       <input id="email" placeholder="email"/>
       <input id="password" placeholder="password"/>
-      <button onClick={this.handleLogin}>Submit</button>
+      <input id="password_confirmation" placeholder="retype password"/>
+      <button onClick={this.handleSignup}>Submit</button>
       </form>
-      <button onClick={() => this.props.changePage("signup")}>Back to Signup</button>
+      <button onClick={() => this.props.changePage("login")}>Back to Login</button>
       </div>
     );
   };

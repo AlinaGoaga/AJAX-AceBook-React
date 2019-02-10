@@ -1,4 +1,6 @@
-const AllComments = (props) => {
+import React from 'react';
+
+export default const AllComments = (props) => {
 
   var comments = props.comments.map((comment) => {
     return(

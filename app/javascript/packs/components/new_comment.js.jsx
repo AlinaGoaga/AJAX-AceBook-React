@@ -1,4 +1,6 @@
-const NewComment = (props) => {
+import React from 'react';
+
+export default const NewComment = (props) => {
 
   let formFields = {}
 

@@ -1,4 +1,6 @@
-class Logout extends React.Component {
+import React from 'react';
+
+export default class Logout extends React.Component {
 
   constructor(props){
     super(props);
@@ -18,7 +20,7 @@ class Logout extends React.Component {
       console.log(error)
     })
   }
-  
+
   render() {
     return (
       <button onClick={this.handleLogout}>Sign Out</button>

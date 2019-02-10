@@ -1,4 +1,9 @@
-class Header extends React.Component {
+import React from 'react';
+import Login from './authentication/login.js.jsx'
+import Logout from './authentication/logout.js.jsx'
+import Signup from './authentication/signup.js.jsx'
+
+export default class Header extends React.Component {
 
   constructor(props){
     super(props);

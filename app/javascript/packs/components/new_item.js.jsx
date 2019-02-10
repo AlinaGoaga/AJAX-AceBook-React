@@ -1,4 +1,6 @@
-const NewPost = (props) => {
+import React from 'react';
+
+export default const NewPost = (props) => {
 
   let formFields = {}
 

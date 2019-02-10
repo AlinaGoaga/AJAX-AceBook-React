@@ -1,8 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
-// const axios = require("axios")
-// console.log(axios)
+import Header from './header.js.jsx'
 
-class App extends React.Component {
+export default class App extends React.Component {
 
   constructor(){
     super();
@@ -46,3 +47,10 @@ class App extends React.Component {
     )
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <App />,
+    document.body.appendChild(document.createElement('div')),
+  )
+})
