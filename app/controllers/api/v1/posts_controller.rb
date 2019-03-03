@@ -1,6 +1,7 @@
 class Api::V1::PostsController < ApplicationController
 
   skip_before_action :verify_authenticity_token
+  before_action :authenticate_user!, :only => [:create, :update, :destroy]
 
   def index
     render json: Post.includes(:comments).all.order('created_at DESC').to_json(include: :comments)

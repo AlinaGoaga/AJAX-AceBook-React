@@ -10,7 +10,6 @@ export default class Signup extends React.Component {
 
   handleSignup(e) {
     e.preventDefault();
-    let that = this
     axios.post('/users', {
       user: {
         email: document.getElementById("email").value,
@@ -18,9 +17,9 @@ export default class Signup extends React.Component {
         password_confirmation: document.getElementById("password_confirmation").value
       }
     })
-    .then(function(response){
-      that.props.changePage("delete");
-      that.props.updateCurrentUser(email);
+    .then((response) => {
+      this.props.changePage("delete");
+      this.props.updateCurrentUser(email);
     })
     .catch(function(error){
       console.log(error)
